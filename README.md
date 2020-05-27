@@ -24,7 +24,7 @@ After Git installation type `git clone https://github.com/Laurent-Andrieu/Spotif
 ###  Spotipy Version 2.12.0
 * Type `pip install spotipy --upgrade` in your terminal
 
-[Spotipy repository](https://github.com/plamere/spotipy/blob/2.12.0/docs/index.rst) | [Spotipy documentation](https://spotipy.readthedocs.io/en/2.12.0/?highlight=scope#example)
+[Spotipy repository](https://github.com/plamere/spotipy/blob/2.12.0/docs/index.rst) | [Spotipy documentation](https://spotipy.readthedocs.io/en/2.12.0/)
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------
 
 ---
