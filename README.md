@@ -50,7 +50,7 @@ You can find your **Profile ID** by going to your account on the **Spotify App**
 - [ ]  `Lyrics.py` : **Web scraping ([Genius](https://genius.com/))**. Retrives the lyrics from the HTML page.
 - [ ]  `Terminal.py` : **Lyrics display**.  Prints the lyrics on a terminal.
 - [ ]  `View.py` : **GUI**.  Allows the user to see the lyrics on an python based small application.
-- [ ]  `Higlight.py`  **Current lyrics higlighting**. Highlights the lyrics in realtime.
+- [ ]  `Higlight.py`: **Current lyrics higlighting**. Highlights the lyrics in realtime.
 
 ##  Commit info
 **Author**  | **Date**  | **Improvements**
