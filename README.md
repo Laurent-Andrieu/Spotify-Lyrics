@@ -41,8 +41,8 @@ Once created, go to **EDIT SETTINGS** > **Redirect URIs** and add any link to yo
 
 [Run.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version1/Run.py)  | [Spotify.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version1/Spotify.py)
 --------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------
-To run the program, simply call this file. > Before you run it, make sure you add your **Profile ID**, your **CLIENT_ID** and **CLIENT_SECRET** from the Developer portal.  | This program contains the `SetCreditential` Class witch will add your IDs in environement variables passed by the `Connexion` Class.
-You can find your **profile id** by going to your account on the **Spotify App** and click on **`...`** > **`Share`** > Copy the Spotify URI. (eg : spotify:user:**`213tzif5o7rzyxtijuqdgtfuq`**) | The `Connexion` Class performs the connexion throught the **Authorization Code Flow** authentification method via `get_token()` function.It also allow you to call the `track_data()` function to retrive the author and the name of the song being played.
+To run the program, simply call this file. Before you run it, make sure you add your **Profile ID**, your **CLIENT_ID** and **CLIENT_SECRET** from the Developer portal.  | This program contains the `SetCreditential` Class witch will add your IDs in environement variables passed by the `Connexion` Class.
+You can find your **Profile ID** by going to your account on the **Spotify App** and click on **`...`** > **`Share`** > Copy the Spotify URI. (eg : spotify:user:**`213tzif5o7rzyxtijuqdgtfuq`**) | The `Connexion` Class performs the connexion throught the **Authorization Code Flow** authentification method via the `get_token()` function. It also allows you to call the `track_data()` function to retrive the author and the name of the song being played.
 
 ---
 
