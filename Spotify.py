@@ -46,7 +46,7 @@ class Connexion:
             track = spotipy.Spotify(self.token).current_user_playing_track()
             if track:
                 track_data = [t for i, t in enumerate(track.items())]
-                track_data = track_data[3][1]["album"]["artists"][0]["name"], track_data[3][1]["name"]
+                track_data = track_data[3][1]["album"]["artists"][0]["name"] + ' ' + track_data[3][1]["name"]
                 return track_data
             else:
                 print("No track is being played")
