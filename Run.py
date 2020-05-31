@@ -22,7 +22,7 @@ def run():
         song_page = link.search()
         # Get the lyrics
         lyrics = Lyrics.Find(song_page)
-        lyric = lyrics.print_lyrics()
+        lyrics.print_lyrics()
 
 
 path = r''
