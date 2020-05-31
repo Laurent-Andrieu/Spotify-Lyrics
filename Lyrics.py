@@ -6,7 +6,7 @@ class Find:
     def __init__(self, url):
         self.url = url
 
-        #   Request the HTML PAGE
+        # Request the HTML PAGE
         self.page = requests.get(self.url)
 
         # Create a BeautifulSoup object
