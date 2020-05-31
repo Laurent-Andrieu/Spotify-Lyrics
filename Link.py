@@ -26,8 +26,12 @@ class Link:
         WebDriverWait(driver, 10)
         time.sleep(4)
         assert "No results found." not in driver.page_source
-        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        top_song = soup.find('div', {'class': 'u-quarter_vertical_margins u-clickable'})
-        item = top_song.find('a', {'class': 'mini_card'})
-        driver.close()
-        return item["href"]
+        try:
+            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            top_song = soup.find('div', {'class': 'u-quarter_vertical_margins u-clickable'})
+            item = top_song.find('a', {'class': 'mini_card'})
+            driver.close()
+            return item["href"]
+        except AttributeError:
+            driver.close()
+            return AttributeError
