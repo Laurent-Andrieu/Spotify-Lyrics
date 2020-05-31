@@ -23,7 +23,6 @@ def run():
         # Get the lyrics
         lyrics = Lyrics.Find(song_page)
         lyric = lyrics.print_lyrics()
-        print(lyric)
 
 
 path = r''
