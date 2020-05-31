@@ -20,12 +20,11 @@ After Git installation type `git clone https://github.com/Laurent-Andrieu/Spotif
 
 ## Requirements
 
-###  Python Version 3.8
-###  Spotipy Version 2.12.0
+###  [Python Version 3.8](https://www.python.org/downloads/release/python-382/)
+###  [Spotipy Version 2.12.0](https://github.com/plamere/spotipy/blob/2.12.0/docs/index.rst)
 * Type `pip install spotipy --upgrade` in your terminal
 
-[Spotipy repository](https://github.com/plamere/spotipy/blob/2.12.0/docs/index.rst) | [Spotipy documentation](https://spotipy.readthedocs.io/en/2.12.0/)
------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------
+[Spotipy documentation](https://spotipy.readthedocs.io/en/2.12.0/)
 ### [Gecko driver](https://github.com/mozilla/geckodriver/releases)
 ### For windows users:
 ### [Visual studio](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
