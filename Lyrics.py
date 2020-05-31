@@ -19,4 +19,4 @@ class Find:
         self.lyrics = self.content.getText(separator="\n")
 
     def print_lyrics(self):
-        return self.lyrics
+        print(self.lyrics)
