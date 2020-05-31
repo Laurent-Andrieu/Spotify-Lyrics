@@ -6,19 +6,27 @@ def run():
     except ImportError as err:
         return err
     else:
-        conn = Spotify.Connexion(client_id="0bd78e654f754f129dc80d43520bac30",
-                                 client_secret="921955a7e0ad45a687676d23f927f046",
+        # Establishing a connexion to Spotify Personnal Application
+        conn = Spotify.Connexion(client_id="",
+                                 client_secret="",
                                  redirect_url="http://localhost:8000/",
-                                 user="213tzif5o7rzyxtijuqdgtfuq",
+                                 user="",
                                  scope="user-read-currently-playing")
+        # Get a token
         conn.get_token()
+        # Ask for the current playing song
         song = conn.track_data()
-        path = r'C:\Users\Laurent\Documents\geckodriver-v0.26.0-win64\geckodriver.exe'
-        finder = Link.Link(song, path)
-        link = finder.search()
-        lyrics = Lyrics.Find(link)
-        lyrics = lyrics.print_lyrics()
-        print(lyrics)
+        # Pass needful data for web scraping
+        link = Link.Link(song, path)
+        # Search for the song
+        song_page = link.search()
+        # Get the lyrics
+        lyrics = Lyrics.Find(song_page)
+        lyric = lyrics.print_lyrics()
+        print(lyric)
+
+
+path = r''
 
 
 if __name__ == '__main__':

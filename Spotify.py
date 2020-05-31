@@ -5,7 +5,13 @@ import os
 
 class SetCreditentials:
 
-    def __init__(self, client_id: str, client_secret: str, redirect_url: str):
+    def __init__(self, client_id, client_secret, redirect_url):
+        """
+
+        :type client_id: str
+        :type client_secret: str
+        :type redirect_url: str
+        """
         self.CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
         self.CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
         self.REDIRECT_URI = os.getenv('SPOTIPY_REDIRECT_URI')
@@ -24,7 +30,6 @@ class Connexion:
         :type user: str
         :type scope: str
         """
-        # Authorization Code Flow
         self.user = user
         self.scope = scope
         self.client_id = client_id
@@ -33,6 +38,7 @@ class Connexion:
         self.token = None
 
     def get_token(self):
+        # Authorization Code Flow
         try:
             SetCreditentials(self.client_id, self.client_secret, self.redirect_url)
             token = prompt_for_user_token(self.user, self.scope)

@@ -7,6 +7,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class Link:
     def __init__(self, song, path):
+        """
+
+        :type song: str
+        :type path: raw str
+        """
         self.url = "https://genius.com/"
         self.song = song
         self.gecko_path = path
