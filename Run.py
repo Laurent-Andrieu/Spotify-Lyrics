@@ -1,11 +1,11 @@
+import Spotify
+import Lyrics
+import Link
+
+
 def run():
-    try:
-        import Spotify
-        import Lyrics
-        import Link
-    except ImportError as err:
-        return err
-    else:
+    global token
+    if not token:
         # Establishing a connexion to Spotify Personnal Application
         conn = Spotify.Connexion(client_id="",
                                  client_secret="",
@@ -13,7 +13,7 @@ def run():
                                  user="",
                                  scope="user-read-currently-playing")
         # Get a token
-        conn.get_token()
+        token = conn.get_token()
         # Ask for the current playing song
         song = conn.track_data()
         # Pass needful data for web scraping
@@ -25,6 +25,7 @@ def run():
         lyrics.print_lyrics()
 
 
+token = None
 path = r''
 
 
