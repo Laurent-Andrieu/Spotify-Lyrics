@@ -16,7 +16,7 @@ class Find:
         self.content = self.soup.find(class_='lyrics')
 
         # Get <br> tag string
-        self.lyrics = self.content.getText(separator="\n")
+        self.lyrics = self.content.getText()
 
     def print_lyrics(self):
-        print(self.lyrics)
+        print(self.lyrics.strip())
