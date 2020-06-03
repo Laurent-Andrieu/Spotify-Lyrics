@@ -30,8 +30,9 @@ class Link:
             soup = BeautifulSoup(self.driver.page_source, 'html.parser')
             top_song = soup.find('div', {'class': 'u-quarter_vertical_margins u-clickable'})
             item = top_song.find('a', {'class': 'mini_card'})
-            driver.close()
             return item["href"]
         except AttributeError:
             driver.close()
             return AttributeError
+        finally:
+            driver.close()
