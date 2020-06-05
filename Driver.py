@@ -25,6 +25,17 @@ class Link:
     def start_driver(self):
         self.driver = webdriver.Firefox(executable_path=self.gecko_path)
 
+    def window_handle(self):
+        # TODO: [Fix] When closed and music changes -> selenium.common.exceptions.WebDriverException: Message: Failed to
+        #  decode response from marionette
+        try:
+            self.wh = self.driver.window_handles
+            self.state['running'] = True
+        except selenium.common.exceptions.InvalidSessionIdException \
+               or selenium.common.exceptions.WebDriverException as session:
+            self.state['running'] = False
+            self.state['error'] = session
+
     def search(self, *song):
         if song:
             self.song = song
