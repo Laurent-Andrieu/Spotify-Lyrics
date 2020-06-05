@@ -40,7 +40,7 @@ Once created, go to **EDIT SETTINGS** > **Redirect URIs** and add any link to yo
 
 # Use Spotify-Lyrics
 
-##  [Run.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version1/Run.py)
+##  [Run.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version2/Run.py)
 To run the program, simply call this file. Before you run it, make sure you add your **Profile ID**, your **CLIENT_ID** and **CLIENT_SECRET** from the Developer portal.
 You can find your **Profile ID** by going to your account on the **Spotify App** and click on **`...`** > **`Share`** > Copy the Spotify URI. (eg : spotify:user:**`213tzif5o7rzyxtijuqdgtfuq`**)
 
