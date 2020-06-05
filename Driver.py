@@ -12,7 +12,6 @@ class Link:
 
         :type path: raw str
         """
-        super().__init__()
         self.url = 'https://genius.com/'
         self.gecko_path = path
         self.state = dict(running=False, error=None)
