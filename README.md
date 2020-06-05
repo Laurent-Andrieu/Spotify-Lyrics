@@ -49,13 +49,19 @@ This program contains the `SetCreditential` Class witch will add your IDs in env
 The `Connexion` Class performs the connexion throught the **Authorization Code Flow** authentification method via the `get_token()` function.
 It also allows you to call the `track_data()` function to retrive the author and name of the song being played.
 
-##  [Link.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version2/Link.py)
+##  [Driver.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version2/Driver.py)
 Scrapes [Genius]() for the song returned by `Spotify.Connexion().track_data()`. Also requires the full path of your gecko driver to work.
 Searches for the song's 'mini card' and returns its [href]().
 
+Call `start_driver()` and `window_handle()` to start the browser and to handle closing errors.
+Call `search()` to get the link and then call `browse()` to open that page.
+
 ## [Lyrics.py](https://github.com/Laurent-Andrieu/Spotify-Lyrics/blob/Version2/Lyrics.py)
 Searches for the lyrics of the song.
-Returns the lyrics.
+Returns the lyrics in plain text format.
+
+Initiate an object with `Find` class  by passing it the [href](). Then call `print_` or store `Find.lyrics` to get the result.
+
 
 ---
 
@@ -67,7 +73,8 @@ Returns the lyrics.
 ##  Commit info
 **Author**  | **Date**  | **Improvements**
 ----------- | --------- | ----------------
-Laurent Andrieu | May 31 2020 02:33pm | - [x] `README.md`
+Laurent Andrieu | Jun 05 2020 16:32pm | - [x] `README.md`
   | | | - [x] Version 2 repository
-  | | | - [x] + Lyrics.py
-  | | | - [x] + Link.py
+  | | | - [x] `Lyrics.py`
+  | | | - [x] `Driver.py`
+  | | | - [x] `Run.py`
