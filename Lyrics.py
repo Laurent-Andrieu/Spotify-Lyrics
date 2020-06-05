@@ -17,6 +17,7 @@ class Find:
 
         # Get <br> tag string
         self.lyrics = self.content.getText()
+        self.lyrics = self.lyrics.strip()
 
-    def print_lyrics(self):
-        print(self.lyrics.strip())
+    def print_(self):
+        print(self.lyrics)
