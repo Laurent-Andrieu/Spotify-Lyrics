@@ -56,6 +56,5 @@ class Connexion:
                 return track_data
             else:
                 print("No track is being played")
-                exit()
         elif self.token is None:
             return "Token was not set or is no longer valid"
